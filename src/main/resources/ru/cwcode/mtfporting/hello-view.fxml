@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="774.0" prefWidth="1105.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.cwcode.mtfporting.ConverterController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Label text="Конвертация между форматами текста">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <SplitPane dividerPositions="0.5" prefHeight="339.0" prefWidth="1065.0">
+         <items>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0">
+               <items>
+                  <TextArea fx:id="textFrom" prefHeight="216.0" prefWidth="529.0" wrapText="true" />
+                  <ChoiceBox fx:id="textFromFormat" prefWidth="150.0" />
+               </items>
+            </SplitPane>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0">
+               <items>
+                  <TextArea fx:id="textTo" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+                  <ChoiceBox fx:id="textToFormat" prefWidth="150.0" />
+               </items>
+            </SplitPane>
+         </items>
+      </SplitPane>
+      <SplitPane dividerPositions="0.5" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="750.0">
+         <items>
+            <Button fx:id="formatButton" mnemonicParsing="false" onAction="#onFormatButtonClick" text="Конвертировать" />
+            <Button mnemonicParsing="false" onAction="#onSwapButtonClick" text="Поменять местами" />
+         </items>
+      </SplitPane>
+      <Hyperlink onAction="#openCwcode" text="Мастерская ClockWork - всё для сервера майнкрафт: карты, плагины, сборки ">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</VBox>
